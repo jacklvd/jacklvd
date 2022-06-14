@@ -26,8 +26,6 @@
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd" /></p>
 
-<p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=jacklvd&theme=dark" alt="jacklvd" /></p>
-
 <!---
 jacklvd/jacklvd is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
