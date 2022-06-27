@@ -34,7 +34,7 @@
 
 
 <h3>Frequently Used Tools-Languages</h3>
-<p><img align="center" src="[https://github-readme-stats.vercel.app/api/top-langs?username=jacklvd](https://github-readme-streak-stats.herokuapp.com/?user=jacklvd)&show_icons=true&theme=dracula&title_color=4a8fba&text_color=f575f1&locale=en&layout=compact" alt="jacklvd" /></p>
+<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=jacklvd&show_icons=true&theme=dracula&title_color=4a8fba&text_color=f575f1&locale=en&layout=compact" alt="jacklvd" /></p>
 
 <h3>Github Stats</h3>
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd" /></p>
