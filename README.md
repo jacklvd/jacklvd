@@ -1,3 +1,6 @@
+<div id="header" align="center">
+  <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
+</div>
 <h1 align="center">Hello there 👋, I'm Jacky</h1>
 <h3 align="center">A passionate undergrad software engineer and software developer</h3>
 
