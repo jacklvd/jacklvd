@@ -33,7 +33,7 @@
 
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=jacklvd&show_icons=true&theme=dracula&title_color=4a8fba&text_color=f575f1&locale=en&layout=compact" alt="jacklvd" /></p>
 
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd" /></p>
+<p>&nbsp;<img align="right" src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd" /></p>
 
 <!---
 jacklvd/jacklvd is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
