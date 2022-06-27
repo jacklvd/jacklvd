@@ -8,6 +8,7 @@
   <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"/>
 </div>
 
+
 <h3 align="center">A passionate undergrad software engineer and software developer</h3>
 
 
