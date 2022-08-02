@@ -69,9 +69,9 @@
   <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> 
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> 
   </a> 
-  <a href="https://postman.com" target="_blank" rel="noreferrer"> 
+<!--   <a href="https://postman.com" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" alt="postman"/> 
-  </a> 
+  </a>  -->
   <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="python"/> 
   </a> 
