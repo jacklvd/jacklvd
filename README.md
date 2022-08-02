@@ -66,12 +66,12 @@
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript"/> 
   </a> 
-  <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> 
+<!--   <a href="https://www.mathworks.com/" target="_blank" rel="noreferrer"> 
     <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/Matlab_Logo.png" alt="matlab" width="40" height="40"/> 
-  </a> 
-<!--   <a href="https://postman.com" target="_blank" rel="noreferrer"> 
-    <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" alt="postman"/> 
   </a>  -->
+  <a href="https://postman.com" target="_blank" rel="noreferrer"> 
+    <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" alt="postman"/> 
+  </a> 
   <a href="https://www.python.org" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="python"/> 
   </a> 
@@ -79,10 +79,19 @@
 
 
 <h3>Frequently Used Tools-Languages</h3>
-<p><img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=jacklvd&show_icons=true&theme=dracula&title_color=4a8fba&text_color=f575f1&locale=en&layout=compact" alt="jacklvd" /></p>
+<p>
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=jacklvd&show_icons=true&theme=dracula&title_color=4a8fba&text_color=f575f1&locale=en&layout=compact" alt="jacklvd" />
+</p>
 
-<h3>Github Stats</h3>
-<p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd" /></p>
+<h3>GitHub Profile Summary</h3>
+<p>
+  <img align="center" src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=vue" alt="jacklvd"/>
+</p>
+
+<h3>GitHub Stats</h3>
+<p>&nbsp;
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd" />
+</p>
 
 <!---
 jacklvd/jacklvd is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
