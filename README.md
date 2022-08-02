@@ -23,10 +23,15 @@
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
-<a href="https://www.linkedin.com/in/longv3312/" target="blank_">[![Linkedin Badge](https://img.shields.io/badge/-kakbar-blue?style=flat&logo=Linkedin&logoColor=white)]([[your-linkedin-url](https://www.linkedin.com/in/longv3312/)])</a>
-<a href="https://instagram.com/jacklvd_" target="blank_"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/instagram.svg" alt="jacklvd_" height="30" width="40" /></a>
-<a href="https://www.hackerrank.com/jlvd32" target="blank_"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/hackerrank.svg" alt="jlvd32" height="30" width="40" /></a>
-<a href="https://www.leetcode.com/jacklvd" target="blank_"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/leet-code.svg" alt="jacklvd" height="30" width="40" /></a>
+<a href="https://www.linkedin.com/in/longv3312/" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
+</a>
+<a href="https://www.facebook.com/bruce.jack.vo" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/Facebook-1877F2?style=for-the-badge&logo=facebook&logoColor=white" />
+</a>
+<a href="mailto:volg@mail.uc.edu" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/email-%23EA4335?&style=for-the-badge&logo=gmail&logoColor=white"/>
+</a>
 </p>
 
 <h3 align="left">:hammer_and_wrench:Languages and Tools:</h3>
