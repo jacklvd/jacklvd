@@ -83,7 +83,8 @@
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs?username=jacklvd&show_icons=true&theme=dracula&title_color=4a8fba&text_color=f575f1&locale=en&layout=compact" alt="jacklvd" />
 </p>
 
-START_SECTION:waka--><!--END_SECTION:waka
+START_SECTION:waka
+END_SECTION:waka
 
 <!-- <h3>GitHub Profile Summary</h3>
 <p>
