@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   schedule:
     # Runs every minute
-    - cron: "* * * * *"
+    - cron: "* */5 * * *"
 
 jobs:
   update-readme:
@@ -14,4 +14,4 @@ jobs:
       - uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
-          REPOSITORY: <jacklvd/jacklvd>
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
