@@ -83,7 +83,7 @@
 
 <h3>Frequently Used Tools-Languages</h3>
 <p>
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacklvd&layout=compact" alt="jacklvd" />
+  <img text-align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacklvd&langs_count=8" alt="jacklvd" />
 </p>
 
 <!-- START_SECTION:waka -->
