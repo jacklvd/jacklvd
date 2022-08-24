@@ -76,7 +76,7 @@
     <img src="https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue" alt="python"/> 
   </a> 
   <a href="https://jupyter.org/" target="_blank" rel="noreferrer"> 
-    <img src="https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=fff&style=flat-square" alt="Jupyter Badge"> 
+    <img src="https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=fff&style=for-the-badge" alt="Jupyter Badge"> 
   </a> 
 </p>
 
