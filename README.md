@@ -21,6 +21,8 @@
 
 - ⚡ Fun fact **I enjoy cooking but not washing dishes**
 
+<hr>
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://www.linkedin.com/in/longv3312/" style="text-decoration: none;">
@@ -36,6 +38,8 @@
 <img src="https://img.shields.io/badge/email-%23EA4335?&style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
 </p>
+
+<hr>
 
 <h3 align="left">:hammer_and_wrench:Languages and Tools:</h3>
 <p align="left"> 
@@ -97,6 +101,7 @@
   </a>
 </p>
 
+<hr>
 
 <h3>Frequently Used Tools-Languages</h3>
 <p>
