@@ -5,9 +5,10 @@
 
 <h1 align="center">Hello there 👋, I'm Jacky. How ya doin's?</h1>
 <div align="center">
-  <img src="https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif" width="600" height="300"/>
+  <img src="https://raw.githubusercontent.com/Gapur/Gapur/master/coding.gif" width="600" height="300"/>
 </div>
 
+<!-- https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif -->
 
 <h3 align="center">A passionate undergrad software engineer and software developer</h3>
 
