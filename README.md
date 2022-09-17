@@ -24,7 +24,7 @@
 
 <hr>
 
-<h3 align="left">Connect with me:</h3>
+<h3 align="left" color="skyblue">Connect with me:</h3>
 <p align="left">
 <a href="https://www.linkedin.com/in/longv3312/" style="text-decoration: none;">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
@@ -42,7 +42,7 @@
 
 <hr>
 
-<h3 align="left">:hammer_and_wrench:Languages and Tools:</h3>
+<h3 align="left" color="skyblue">:hammer_and_wrench:Languages and Tools:</h3>
 <p align="left"> 
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="c"/> 
@@ -104,7 +104,7 @@
 
 <hr>
 
-<h3>Frequently Used Tools-Languages</h3>
+<h3 color="skyblue">Frequently Used Tools-Languages</h3>
 <p>
   <img text-align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacklvd&langs_count=8&theme=tokyonight" alt="jacklvd" />
 </p>
@@ -117,7 +117,7 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=vue" alt="jacklvd"/>
 </p>
  -->
-<h3>GitHub Stats</h3>
+<h3 color="skyblue">GitHub Stats</h3>
 <p>&nbsp;
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd" />
 </p>
