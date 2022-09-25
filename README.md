@@ -42,7 +42,7 @@
 
 <hr>
 
-## :hammer_and_wrench:Languages and Tools
+## :hammer_and_wrench: Languages and Tools:
 <p align="left"> 
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="c"/> 
