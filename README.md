@@ -104,7 +104,7 @@
 
 <hr>
 
-## ❤️ Frequently Languages
+## ❤️ Frequently Languages:
 
 <div align='center'>
   <img text-align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacklvd&langs_count=8&theme=tokyonight" alt="jacklvd" />
