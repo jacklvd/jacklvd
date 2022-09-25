@@ -105,9 +105,9 @@
 <hr>
 
 <h3 color="skyblue">Frequently Used Tools-Languages</h3>
-<p>
+<div align='center'>
   <img text-align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacklvd&langs_count=8&theme=tokyonight" alt="jacklvd" />
-</p>
+</div>
 
 <!-- START_SECTION:waka -->
 <!-- END_SECTION:waka -->
@@ -116,11 +116,12 @@
 <div align='center'>
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=vue" alt="jacklvd"/>
 </div>
- -->
+
 ### <font color='skyblue'>Git Stat</font>
-<p>&nbsp;
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd" />
-</p>
+
+<div align='center'>&nbsp;
+  <img src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd"/>
+</div>
 
 <!---
 jacklvd/jacklvd is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
