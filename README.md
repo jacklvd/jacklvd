@@ -1,7 +1,7 @@
-<div id="header" align="center">
+<!-- <div id="header" align="center">
   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width="100"/>
 </div>
-<p align="center"> <img src="https://komarev.com/ghpvc/?username=jacklvd&label=Profile%20views&color=0e75b6&style=flat" alt="jacklvd" /> </p>
+<p align="center"> <img src="https://komarev.com/ghpvc/?username=jacklvd&label=Profile%20views&color=0e75b6&style=flat" alt="jacklvd" /> </p> -->
 
 <h1 align="center">Hello there 👋, I'm Jacky. How ya doin's?</h1>
 <div align="center">
@@ -104,7 +104,8 @@
 
 <hr>
 
-<h3 color="skyblue">Frequently Used Tools-Languages</h3>
+## ❤️ Frequently Languages
+
 <div align='center'>
   <img text-align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacklvd&langs_count=8&theme=tokyonight" alt="jacklvd" />
 </div>
@@ -113,14 +114,14 @@
 <!-- END_SECTION:waka -->
 
 
-<div align='center'>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=vue" alt="jacklvd"/>
-</div>
-
-### <font color='skyblue'>Git Stat</font>
+## 📈 Git Statistic:
 
 <div align='center'>&nbsp;
   <img src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd"/>
+</div>
+
+<div align='center'>
+  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=vue" alt="jacklvd"/>
 </div>
 
 <!---
