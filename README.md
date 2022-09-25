@@ -24,7 +24,7 @@
 
 <hr>
 
-<h3 align="left" color="skyblue">Connect with me:</h3>
+## 📮 Connect with me:
 <p align="left">
 <a href="https://www.linkedin.com/in/longv3312/" style="text-decoration: none;">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
@@ -42,7 +42,7 @@
 
 <hr>
 
-<h3 align="left" color="skyblue">:hammer_and_wrench:Languages and Tools:</h3>
+## :hammer_and_wrench:Languages and Tools
 <p align="left"> 
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="c"/> 
