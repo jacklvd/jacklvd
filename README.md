@@ -3,7 +3,7 @@
 </div>
 <p align="center"> <img src="https://komarev.com/ghpvc/?username=jacklvd&label=Profile%20views&color=0e75b6&style=flat" alt="jacklvd" /> </p> -->
 
-<h1 align="center">Hello there 👋, I'm Jacky. How ya doin's?</h1>
+<h1 align="center">Hello there 👋, I'm Jacky. How yall doin's?</h1>
 <div align="center">
   <img src="https://raw.githubusercontent.com/Gapur/Gapur/master/coding.gif" width="600" height="300"/>
 </div>
