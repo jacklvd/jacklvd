@@ -14,7 +14,7 @@
 
 <hr>
 
-- 🌱 I’m currently learning **Django, Pygame, React, SQL**
+- 🌱 I’m currently doing **Django, Pygame, React, SQL**
 
 - 💬 Ask me about **React, Django, ML, AI**
 
