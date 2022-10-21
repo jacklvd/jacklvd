@@ -24,7 +24,7 @@
 
 <hr>
 
-## 📮 Connect with me:
+## 📮 Connect with me 📮
 <p align="left">
 <a href="https://www.linkedin.com/in/longv3312/" style="text-decoration: none;">
 <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
