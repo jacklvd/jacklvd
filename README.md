@@ -42,7 +42,7 @@
 
 <hr>
 
-## :hammer_and_wrench: Languages and Tools:
+## :hammer_and_wrench: Languages and Tools :hammer_and_wrench:
 <p align="left"> 
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="c"/> 
@@ -104,7 +104,7 @@
 
 <hr>
 
-## ❤️ Frequently Languages:
+## ❤️ Frequently Languages ❤️
 
 <div align='center'>
   <img text-align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacklvd&langs_count=8&theme=tokyonight" alt="jacklvd" />
@@ -116,12 +116,14 @@
 <!-- END_SECTION:waka -->
 
 
-## 📈 Git Statistic:
+## 📈 Git Statistic 📈
 
 <div align='center'>&nbsp;
   <img src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd"/>
 </div>
 <br>
+
+<hr>
 
 <div align='center'>
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=vue" alt="jacklvd"/>
