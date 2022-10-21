@@ -14,13 +14,13 @@
 
 <hr>
 
-- 🌱 I’m currently doing **Django, Pygame, React, SQL**
+- 🌱 I’m currently working and using **Django, Pygame, React, SQL**
 
 - 💬 Ask me about **React, Django, ML, AI**
 
-- 📫 How to reach me **volg@mail.uc.edu**
+- 📫 How to reach me **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
 
-- ⚡ Fun fact **I enjoy cooking but not washing dishes**
+- ⚡ Fun fact **I am not good at remembering words, but I can almost instally remember a number just by hearing or looking at it.**
 
 <hr>
 
