@@ -21,7 +21,7 @@
 
 - 📫 How to reach me **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
 
-- ⚡ Fun fact **I am not good at remembering words, but I can almost instally remember a number just by hearing or looking at it.**
+- ⚡ Fun fact **I am not good at remembering words, but I can almost instantly remember a number just by hearing or looking at it.**
 
 <hr>
 
