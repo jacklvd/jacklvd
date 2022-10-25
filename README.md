@@ -15,6 +15,7 @@
 
 <hr>
 
+## 🫠 Facts 🫠
 - 🌱 I’m currently working and using **Django, Pygame, React, SQL**
 
 - 💬 Ask me about **React, Django, ML, AI**
@@ -23,7 +24,7 @@
 
 - ⚡ Fun fact **I am not good at remembering words, but I can almost instantly memorize a number just by hearing or looking at it.**
 
-<hr>
+<!-- <hr> -->
 
 ## 📮 Connect with me 📮
 <p align="left">
@@ -41,7 +42,7 @@
 </a>
 </p>
 
-<hr>
+<!-- <hr> -->
 
 ## :hammer_and_wrench: Languages and Tools :hammer_and_wrench:
 <p align="left"> 
@@ -103,7 +104,7 @@
   </a>
 </p>
 
-<hr>
+<!-- <hr> -->
 
 ## ❤️ Frequently Languages ❤️
 
@@ -130,10 +131,6 @@
 
 
 <!-- START_SECTION:waka -->
-
-
-
-
 
 <!-- END_SECTION:waka -->
 
