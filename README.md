@@ -112,9 +112,7 @@
 </div>
 
 
-<!-- START_SECTION:waka -->
 
-<!-- END_SECTION:waka -->
 
 
 ## 📈 Git Statistic 📈
@@ -126,9 +124,19 @@
 
 <!-- <hr> -->
 
-<div align='center'>
+<!-- <div align='center'>
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=vue" alt="jacklvd"/>
-</div>
+</div> -->
+
+
+<!-- START_SECTION:waka -->
+
+
+
+
+
+<!-- END_SECTION:waka -->
+
 
 <!---
 jacklvd/jacklvd is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
