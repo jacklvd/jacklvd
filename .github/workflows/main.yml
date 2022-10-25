@@ -3,16 +3,16 @@ name: Work Stats Readme
 on:
   workflow_dispatch:
   schedule:
-    # Runs every minute
-    - cron: "* */5 * * *"
+    # Runs at 12 UTC everyday
+    - cron: "0 0 * * *"
 
 jobs:
   update-readme:
-    name: Update this repo's README
+    name: waka time metric
     runs-on: ubuntu-latest
     steps:
       - uses: athul/waka-readme@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          SHOW_TITLE: true
+#           SHOW_TITLE: true
