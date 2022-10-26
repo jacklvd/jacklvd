@@ -130,7 +130,7 @@
 </div> -->
 
 
-## 📊 Waka Time Week Stat 📊
+<!-- ## 📊 Waka Time Week Stat 📊 -->
 <!-- START_SECTION:waka -->
 <!-- END_SECTION:waka -->
 
