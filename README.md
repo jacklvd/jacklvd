@@ -119,7 +119,7 @@
 ## 📈 Git Statistic 📈
 
 <div align='center'>&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight&title_color=c708fd&text_color=0fe6e3&locale=en" alt="jacklvd"/>
+  <img src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=merko" alt="jacklvd"/>
 </div>
 <br>
 
@@ -130,10 +130,10 @@
 </div> -->
 
 
+## 📊 Waka Time Week Stat 📊
 <!-- START_SECTION:waka -->
 
 <!-- END_SECTION:waka -->
-
 
 <!---
 jacklvd/jacklvd is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
