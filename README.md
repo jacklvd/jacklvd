@@ -18,7 +18,7 @@
 ## 🫠 Facts 🫠
 - 🌱 I’m currently working and using **Django, Pygame, React, SQL**
 
-- 💬 Ask me about **React, Django, ML, AI**
+- 💬 Talk to me about **Everything**
 
 - 📫 How to reach me **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
 
