@@ -15,10 +15,12 @@
 
 <hr>
 
-## 🫠 Facts 🫠
+## 🫠 About Me 🫠
+- 📚 I'm a rising junior majoring in Computer Science at UCinn
+
 - 🌱 I’m currently working and using **Django, Pygame, React, SQL**
 
-- 💬 Talk to me about **Everything**
+- 💬 Chat with me about **Everything**
 
 - 📫 How to reach me **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
 
