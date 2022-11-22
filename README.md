@@ -11,7 +11,7 @@
 
 <!-- https://media.giphy.com/media/dWesBcTLavkZuG35MI/giphy.gif -->
 
-<h3 align="center">A passionate undergrad software engineer and software developer</h3>
+<h3 align="center">A passionate undergrad software engineer and software developer with an enthusiasm in data analysis</h3>
 
 <hr>
 
