@@ -18,7 +18,7 @@
 ## 🫠 About Me 🫠
 - 📚 I'm a rising junior majoring in Computer Science at UCinn
 
-- 🌱 I’m currently working and using **Django, Pygame, React, SQL**
+- 🌱 I’m currently working and using **Django, Jupyter, React, SQL**
 
 - 💬 Chat with me about **Everything**
 
