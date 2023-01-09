@@ -68,7 +68,10 @@
   </a> 
   <a href="https://git-scm.com/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/GIT-E44C30?style=for-the-badge&logo=git&logoColor=white" alt="git"/> 
-  </a> 
+  </a>
+  <a href="https://www.markdownguide.org/" target="_blank" rel="noreferrer"> 
+    <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="markdown"/> 
+  </a>
 <!--   <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5"/> 
   </a> 
