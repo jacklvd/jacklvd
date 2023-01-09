@@ -56,6 +56,9 @@
   </a> 
   <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="cplusplus"/> 
+  </a>
+    <a href="https://kotlinlang.org/" target="_blank" rel="noreferrer"> 
+    <img src="https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white" alt="kotlin"/> 
   </a> 
   <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css3"/> 
@@ -109,6 +112,9 @@
   </a> 
   <a href="https://jupyter.org/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/Jupyter-F37626?logo=jupyter&logoColor=fff&style=for-the-badge" alt="Jupyter Badge"> 
+  </a>
+    <a href="https://www.netlify.com/" target="_blank" rel="noreferrer"> 
+    <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify"> 
   </a>
 </p>
 
