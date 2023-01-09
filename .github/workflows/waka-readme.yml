@@ -1,17 +1,16 @@
 name: Work Stats Readme
 
 on:
-  workflow_dispatch:
   schedule:
     # Runs at 12 UTC everyday
     - cron: "0 0 * * *"
-
+  workflow_dispatch:  
 jobs:
   update-readme:
     name: waka time metric
     runs-on: ubuntu-latest
     steps:
-      - uses: athul/waka-readme@master
+      - uses: anmol098/waka-readme-stats@master
         with:
           WAKATIME_API_KEY: ${{ secrets.WAKATIME_API_KEY }}
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
