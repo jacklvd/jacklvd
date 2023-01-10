@@ -144,7 +144,7 @@
 </div> -->
 
 
-📊 Waka Time Week Stat 📊
+📊 Development Breakdown 📊
 <!--START_SECTION:waka-->
 
 ```text
