@@ -15,7 +15,7 @@
 
 <hr>
 
-## 🫠 About Me 🫠
+## 🧍 About Me 🧍
 - 📚 I'm a rising junior majoring in Computer Science at UCinn
 
 - 🌱 I’m currently working and using **Django, Jupyter, React, SQL**
