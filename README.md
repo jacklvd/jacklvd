@@ -100,7 +100,7 @@
 ## ❤️ Frequently Languages ❤️
 
 <div align='left'>
-  <img text-align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=jacklvd&layout=compact&theme=merko" alt="jacklvd" />
+  <img text-align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jacklvd&layout=compact&theme=merko" alt="jacklvd" />
 </div>
 
 
@@ -110,7 +110,7 @@
 ## 📈 Git Statistic 📈
 
 <div align='left'>&nbsp;
-  <img src="https://github-readme-stats.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight" alt="jacklvd"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight" alt="jacklvd"/>
 </div>
 <br>
 
