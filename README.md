@@ -16,9 +16,11 @@
 <hr>
 
 ## 🧍 About Me 🧍
-- 📚 I'm a rising junior majoring in Computer Science at UCinn
+- 📚 I'm a junior majoring in Computer Science at UCinn
 
-- 🌱 I’m currently working and using **Django, Jupyter, React, SQL**
+- 🎓 I'm working toward to become a real **Software Engineer with a interest field in data**
+
+- 🌱 I’m currently using **Django, Jupyter, React, SQL**
 
 - 💬 Chat with me about **Everything**
 
@@ -116,9 +118,6 @@
 
 <!-- <hr> -->
 
-<!-- <div align='center'>
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=vue" alt="jacklvd"/>
-</div> -->
 
 
 ## 📊 Development Breakdown 📊
