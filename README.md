@@ -124,12 +124,11 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 31 December 2022 - To: 30 January 2023
+From: 01 January 2023 - To: 31 January 2023
 
-Total Time: 22 hrs 32 mins
+Total Time: 24 hrs 14 mins
 
-Kotlin           4 hrs 43 mins   >>>>>--------------------   20.93 %
-Other            4 hrs 33 mins   >>>>>--------------------   20.21 %
+Other            6 hrs 1 min     >>>>>>-------------------   24.88 %
 ```
 
 <!--END_SECTION:waka-->
