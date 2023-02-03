@@ -124,11 +124,11 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 01 January 2023 - To: 31 January 2023
+From: 02 January 2023 - To: 01 February 2023
 
-Total Time: 24 hrs 14 mins
+Total Time: 25 hrs 4 mins
 
-Other            6 hrs 1 min     >>>>>>-------------------   24.88 %
+Other            6 hrs 24 mins   >>>>>>-------------------   25.59 %
 ```
 
 <!--END_SECTION:waka-->
