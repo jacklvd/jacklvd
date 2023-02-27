@@ -124,11 +124,12 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 25 January 2023 - To: 24 February 2023
+From: 26 January 2023 - To: 25 February 2023
 
-Total Time: 19 hrs 36 mins
+Total Time: 22 hrs 52 mins
 
-Other            5 hrs 58 mins   >>>>>>>>-----------------   30.49 %
+JavaScript       8 hrs 48 mins   >>>>>>>>>>---------------   38.53 %
+Other            6 hrs 1 min     >>>>>>>------------------   26.33 %
 ```
 
 <!--END_SECTION:waka-->
