@@ -83,9 +83,12 @@
   <a href="https://www.java.com" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=java&logoColor=white" alt="java"/> 
   </a> 
+  <a href="https://react.dev/" target="_blank" rel="noreferrer"> 
+    <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="react"/> 
+  </a>
   <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="javascript"/> 
-  </a> 
+  </a>   
   <a href="https://postman.com" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=Postman&logoColor=white" alt="postman"/> 
   </a> 
