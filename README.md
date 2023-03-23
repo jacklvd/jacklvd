@@ -53,7 +53,10 @@
   <a href="https://www.w3schools.com/cpp/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white" alt="cplusplus"/> 
   </a>
-    <a href="https://kotlinlang.org/" target="_blank" rel="noreferrer"> 
+  <a href="https://dotnet.microsoft.com/en-us/download/dotnet-framework" target="_blank" rel="noreferrer"> 
+    <img src="https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white" alt=".net"/> 
+  </a>
+  <a href="https://kotlinlang.org/" target="_blank" rel="noreferrer"> 
     <img src="https://img.shields.io/badge/Kotlin-0095D5?&style=for-the-badge&logo=kotlin&logoColor=white" alt="kotlin"/> 
   </a> 
   <a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer"> 
