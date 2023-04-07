@@ -130,13 +130,12 @@
 <!--START_SECTION:waka-->
 
 ```text
-From: 27 February 2023 - To: 29 March 2023
+From: 08 March 2023 - To: 07 April 2023
 
-Total Time: 64 hrs 28 mins
+Total Time: 51 hrs 58 mins
 
-VB.NET       23 hrs 13 mins  >>>>>>>>>----------------   36.03 %
-JavaScript   13 hrs 36 mins  >>>>>--------------------   21.11 %
-Other        13 hrs 13 mins  >>>>>--------------------   20.50 %
+VB.NET       20 hrs 29 mins  >>>>>>>>>>---------------   39.44 %
+Other        12 hrs 38 mins  >>>>>>-------------------   24.32 %
 ```
 
 <!--END_SECTION:waka-->
