@@ -22,9 +22,9 @@
 
 - 🌱 I’m currently using **Django, Jupyter, React, SQL**
 
-- 💬 Chat with me about **Everything**
+- 💬 I'm open to discuss **Everything**
 
-- 📫 How to reach me **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
+- 📫 I'm stay in-touch at **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
 
 - ⚡ Fun fact **I am not good at remembering words, but I can almost instantly memorize a number just by hearing or looking at it.**
 
