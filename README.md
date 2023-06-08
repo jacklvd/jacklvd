@@ -16,11 +16,11 @@
 <hr>
 
 ## 🧍 About Me 🧍
-- 📚 I'm a junior majoring in Computer Science at UCinn
+- 📚 I'm a rising senior majoring in Computer Science at UCinn
 
 - 🎓 I'm working toward to become a real **Software Engineer with a interest field in data**
 
-- 🌱 I’m currently using **Django, Jupyter, React, SQL**
+- 🌱 I’m currently using **Django, Jupyter, React, SQL, MongoDB**
 
 - 💬 I'm open to discuss **Everything**
 
