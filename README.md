@@ -104,12 +104,12 @@
 </p>
 
 <!-- <hr> -->
-
+<!-- 
 ## ❤️ Frequently Languages ❤️
 
 <div align='left'>
   <img text-align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=jacklvd&layout=compact&theme=merko" alt="jacklvd" />
-</div>
+</div> -->
 
 
 
