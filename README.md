@@ -130,15 +130,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 30 September 2023 - To: 30 October 2023
+From: 01 October 2023 - To: 31 October 2023
 
-Total Time: 36 hrs 23 mins
+Total Time: 36 hrs 20 mins
 
-TypeScript   16 hrs 13 mins  >>>>>>>>>>>--------------   44.61 %
-JavaScript   6 hrs 5 mins    >>>>---------------------   16.74 %
-CSS          3 hrs 11 mins   >>-----------------------   08.78 %
-Python       2 hrs 25 mins   >>-----------------------   06.64 %
-GDScript3    1 hr 47 mins    >------------------------   04.91 %
+TypeScript   16 hrs 13 mins  >>>>>>>>>>>--------------   44.66 %
+JavaScript   6 hrs 4 mins    >>>>---------------------   16.71 %
+CSS          3 hrs 11 mins   >>-----------------------   08.79 %
+Python       2 hrs 25 mins   >>-----------------------   06.65 %
+GDScript3    1 hr 47 mins    >------------------------   04.92 %
 ```
 
 <!--END_SECTION:waka-->
