@@ -130,13 +130,13 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 21 December 2023 - To: 20 January 2024
+From: 22 December 2023 - To: 21 January 2024
 
-Total Time: 13 hrs 55 mins
+Total Time: 14 hrs 8 mins
 
-Text     10 hrs 46 mins  >>>>>>>>>>>>>>>>>>>------   77.44 %
-Python   3 hrs 8 mins    >>>>>>-------------------   22.54 %
-Other    0 secs          -------------------------   00.02 %
+Text     10 hrs 46 mins  >>>>>>>>>>>>>>>>>>>------   76.26 %
+Python   3 hrs 21 mins   >>>>>>-------------------   23.74 %
+Other    0 secs          -------------------------   00.00 %
 ```
 
 <!--END_SECTION:waka-->
