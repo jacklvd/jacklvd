@@ -130,14 +130,14 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 31 December 2023 - To: 30 January 2024
+From: 01 January 2024 - To: 31 January 2024
 
-Total Time: 31 hrs 50 mins
+Total Time: 32 hrs 24 mins
 
-Text         17 hrs 16 mins  >>>>>>>>>>>>>>-----------   54.22 %
-Python       14 hrs 1 min    >>>>>>>>>>>--------------   44.06 %
-TypeScript   13 mins         -------------------------   00.69 %
-Git Config   11 mins         -------------------------   00.62 %
+Text         17 hrs 23 mins  >>>>>>>>>>>>>------------   53.64 %
+Python       14 hrs 28 mins  >>>>>>>>>>>--------------   44.68 %
+TypeScript   13 mins         -------------------------   00.68 %
+Git Config   11 mins         -------------------------   00.61 %
 HTML         6 mins          -------------------------   00.32 %
 ```
 
