@@ -44,7 +44,7 @@
 </p>
 
 <!-- <hr> -->
-
+<!--
 ## 🐱‍💻 Languages and Tools 🐱‍💻
 <p align="left"> 
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer"> 
@@ -102,7 +102,7 @@
     <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify"> 
   </a>
 </p>
-
+-->
 <!-- <hr> -->
 <!-- 
 ## ❤️ Frequently Languages ❤️
@@ -114,14 +114,14 @@
 
 
 
-
+<!--
 ## 📈 Git Statistic 📈
 
 <div align='left'>&nbsp;
   <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=jacklvd&show_icons=true&theme=tokyonight" alt="jacklvd"/>
 </div>
 <br>
-
+-->
 <!-- <hr> -->
 
 
