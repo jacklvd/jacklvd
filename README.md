@@ -20,8 +20,6 @@
 
 - 🎓 I'm working toward to become a real **Software Engineer with a interest field in data**
 
-- 🌱 I’m currently using **Django, Jupyter, React, SQL, MongoDB**
-
 - 💬 I'm open to discuss **Everything**
 
 - 📫 I'm stay in-touch at **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
