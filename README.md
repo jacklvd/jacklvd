@@ -16,7 +16,7 @@
 <hr>
 
 ## 🧍 About Me 🧍
-- 📚 I'm a rising senior majoring in Computer Science at UCinn
+- 📚 I'm a senior majoring in Computer Science at UCinn
 
 - 🎓 I'm working toward to become a real **Software Engineer with a interest field in data**
 
