@@ -18,13 +18,13 @@
 ## 🧍 About Me 🧍
 - 📚 I'm a senior majoring in Computer Science
 
-- 🎓 I'm a **Software Engineer with a interest field in infra, data, web**
+- 🎓 I'm a **Software Engineer with interest fields in infra, data, web**
 
 - 💬 I'm open to discuss **Everything** even not tech related :")
 
 - 📫 I'm stay in-touch at **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
 
-- ⚡ Fun fact **I am not good at remembering words, but I can almost instantly memorize a number just by hearing or looking at it.**
+- ⚡ Fun fact **I love cooking but hate washing dishes.**
 
 <!-- <hr> -->
 
