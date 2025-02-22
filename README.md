@@ -128,15 +128,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 20 January 2025 - To: 19 February 2025
+From: 21 January 2025 - To: 20 February 2025
 
-Total Time: 12 hrs 43 mins
+Total Time: 12 hrs 59 mins
 
-TypeScript   9 hrs 23 mins   >>>>>>>>>>>>>>>>>>-------   73.74 %
-Go           1 hr 17 mins    >>>----------------------   10.18 %
-Other        35 mins         >------------------------   04.70 %
-Bash         34 mins         >------------------------   04.46 %
-JSON         24 mins         >------------------------   03.17 %
+TypeScript   9 hrs 35 mins   >>>>>>>>>>>>>>>>>>-------   73.86 %
+Go           1 hr 17 mins    >>-----------------------   09.97 %
+Other        39 mins         >------------------------   05.03 %
+Bash         34 mins         >------------------------   04.37 %
+JSON         24 mins         >------------------------   03.10 %
 ```
 
 <!--END_SECTION:waka-->
