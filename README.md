@@ -128,15 +128,15 @@
 <!--START_SECTION:waka-->
 
 ```txt
-From: 02 April 2025 - To: 02 May 2025
+From: 03 April 2025 - To: 03 May 2025
 
-Total Time: 40 hrs 54 mins
+Total Time: 38 hrs 5 mins
 
-TypeScript           21 hrs 18 mins  >>>>>>>>>>>>>------------   52.09 %
-Python               11 hrs 5 mins   >>>>>>>------------------   27.10 %
-Bash                 2 hrs 5 mins    >------------------------   05.11 %
-YAML                 1 hr 47 mins    >------------------------   04.39 %
-JSON                 54 mins         >------------------------   02.23 %
+TypeScript           20 hrs 3 mins   >>>>>>>>>>>>>------------   52.64 %
+Python               10 hrs 33 mins  >>>>>>>------------------   27.73 %
+YAML                 1 hr 47 mins    >------------------------   04.72 %
+Bash                 1 hr 46 mins    >------------------------   04.66 %
+JSON                 51 mins         >------------------------   02.25 %
 ```
 
 <!--END_SECTION:waka-->
