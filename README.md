@@ -16,8 +16,6 @@
 <hr>
 
 ## 🧍 About Me 🧍
-- 📚 I'm a senior majoring in Computer Science
-
 - 🎓 I'm a **Software Engineer with interest fields in infra, data, web**
 
 - 💬 I'm open to discuss **Everything** even not tech related :")
