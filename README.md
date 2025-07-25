@@ -22,7 +22,7 @@
 
 - 📫 I'm stay in-touch at **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
 
-- ⚡ Fun fact **I love cooking but hate washing dishes.**
+- ⚡ Fun fact **I love cooking but hate washing dishes. I also into League but mobile version and am at Diamond tier**
 
 <!-- <hr> -->
 
