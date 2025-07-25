@@ -20,7 +20,7 @@
 
 - 💬 I'm open to discuss **Everything** even not tech related :")
 
-- 📫 I'm stay in-touch at **volg@mail.uc.edu** or **vodanglong3103@gmail.com**
+- 📫 I'm stay in-touch at **vodnglg@gmail.com**
 
 - ⚡ Fun fact **I love cooking but hate washing dishes. I also into League but mobile version and am at Diamond tier**
 
