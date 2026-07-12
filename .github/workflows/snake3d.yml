@@ -17,12 +17,12 @@ jobs:
           token: ${{ secrets.CONTRIB_TOKEN }}
       - uses: astral-sh/setup-uv@v3
       - name: self-check
-        run: uv run --directory snake3d test_render.py
+        run: uv run --directory snake3d python -m tests.test_render
       - name: render
         env:
           GITHUB_TOKEN: ${{ secrets.CONTRIB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-        run: uv run --directory snake3d render.py
+        run: uv run --directory snake3d python -m render.render
       - name: commit & push
         run: |
           git config user.name github-actions

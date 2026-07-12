@@ -53,8 +53,8 @@ def draw_radar_chart(metrics: dict[str, int], size: tuple[int, int], date_range_
     font = ImageFont.load_default(size=13)
     small_font = ImageFont.load_default(size=11)
 
-    header_h = 18
-    draw.text((width - 4, 2), date_range_label, fill=(*colors["radar_grid"], 255), font=small_font, anchor="ra")
+    header_h = 30
+    draw.text((width - 4, 0), date_range_label, fill=(*colors["radar_grid"], 255), font=small_font, anchor="ra")
 
     cx = width // 2
     cy = header_h + (height - header_h) // 2

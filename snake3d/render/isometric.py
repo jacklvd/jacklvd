@@ -3,7 +3,7 @@ from PIL import Image, ImageDraw
 TILE_W = 20
 TILE_H = 10
 HEIGHT_SCALE = 8
-MARGIN = 40
+MARGIN = 70
 
 
 def project(week: int, day: int, dims: tuple[int, int]) -> tuple[int, int]:

@@ -1,4 +1,4 @@
 docs/superpowers/
 snake3d/.venv/
-snake3d/__pycache__/
-snake3d/*.pyc
+snake3d/**/__pycache__/
+snake3d/**/*.pyc

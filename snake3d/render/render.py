@@ -1,12 +1,12 @@
 import os
 from datetime import datetime, timedelta, timezone
 
-import charts
-import grid as gridmod
-import isometric
-import solver
-import stats as statsmod
-import gif as gifmod
+from . import charts
+from . import grid as gridmod
+from . import isometric
+from . import solver
+from . import stats as statsmod
+from . import gif as gifmod
 
 SHRINK_FRAMES = 5
 
@@ -18,9 +18,9 @@ RADAR_GRID = (90, 90, 110)
 RADAR_LINE = (245, 210, 90)
 TEXT = (230, 230, 235)
 
-RADAR_SIZE = (210, 190)
+RADAR_SIZE = (210, 205)
 DONUT_SIZE = (310, 150)
-OVERLAY_MARGIN = 14
+OVERLAY_MARGIN = 26
 
 # Same three stops as the README's capsule-render footer (0:141321,50:A78BFA,100:F0568C),
 # swept left-to-right across the weeks so the grid reads as one gradient instead of flat purple.

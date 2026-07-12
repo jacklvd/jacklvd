@@ -1,5 +1,5 @@
 def test_bucket_height():
-    from grid import bucket_height
+    from render.grid import bucket_height
     assert bucket_height(0) == 0
     assert bucket_height(2) == 1
     assert bucket_height(5) == 2
@@ -8,7 +8,7 @@ def test_bucket_height():
 
 
 def test_parse_weeks():
-    from grid import parse_weeks
+    from render.grid import parse_weeks
 
     raw_weeks = [
         {"contributionDays": [{"contributionCount": 1}, {"contributionCount": 0}]},
@@ -25,7 +25,7 @@ def test_parse_weeks():
 
 
 def test_solver_walk_contiguous_and_covers_targets():
-    from solver import solve
+    from render.solver import solve
 
     grid = [
         [1, 0],
@@ -43,21 +43,21 @@ def test_solver_walk_contiguous_and_covers_targets():
 
 
 def test_project_known_point():
-    from isometric import project
+    from render.isometric import project
 
-    assert project(0, 0, (3, 2)) == (60, 40)
-    assert project(2, 1, (3, 2)) == (70, 55)
+    assert project(0, 0, (3, 2)) == (90, 70)
+    assert project(2, 1, (3, 2)) == (100, 85)
 
 
 def test_hex_to_rgb():
-    from stats import hex_to_rgb
+    from render.stats import hex_to_rgb
 
     assert hex_to_rgb("#3572A5") == (0x35, 0x72, 0xA5)
     assert hex_to_rgb(None) == (110, 110, 110)
 
 
 def test_language_breakdown_ranks_and_buckets_other():
-    from stats import language_breakdown
+    from render.stats import language_breakdown
 
     repo_nodes = [
         {"languages": {"edges": [{"size": 100, "node": {"name": "Python", "color": "#3572A5"}}]}},
@@ -75,7 +75,7 @@ def test_language_breakdown_ranks_and_buckets_other():
 
 
 def test_radar_value_ratio_log_scale():
-    from charts import _value_ratio
+    from render.charts import _value_ratio
 
     assert _value_ratio(1) == 0.0
     assert abs(_value_ratio(100) - 0.5) < 1e-9
