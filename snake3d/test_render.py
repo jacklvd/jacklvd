@@ -42,6 +42,13 @@ def test_solver_walk_contiguous_and_covers_targets():
     assert targets.issubset(set(walk))
 
 
+def test_project_known_point():
+    from isometric import project
+
+    assert project(0, 0, (3, 2)) == (60, 40)
+    assert project(2, 1, (3, 2)) == (70, 55)
+
+
 def main():
     tests = [obj for name, obj in globals().items() if name.startswith("test_") and callable(obj)]
     for test in tests:
