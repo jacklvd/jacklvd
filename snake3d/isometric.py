@@ -32,7 +32,7 @@ def cube_polygons(x: int, y: int, height_px: float):
     return top, left, right
 
 
-def draw_frame(grid, heights_px, snake_cells, dims, colors, size):
+def draw_frame(heights_px, snake_cells, dims, colors, size):
     weeks, days = dims
     image = Image.new("RGB", size, colors["background"])
     draw = ImageDraw.Draw(image)
@@ -45,7 +45,7 @@ def draw_frame(grid, heights_px, snake_cells, dims, colors, size):
         x, y = project(week, day, dims)
         height_px = heights_px[week][day]
         top, left, right = cube_polygons(x, y, height_px)
-        bucket = min(4, int(height_px // HEIGHT_SCALE))
+        bucket = max(0, min(4, int(height_px // HEIGHT_SCALE)))
         top_color, left_color, right_color = colors["buckets"][bucket]
         draw.polygon(left, fill=left_color)
         draw.polygon(right, fill=right_color)
