@@ -41,15 +41,21 @@ def draw_frame(heights_px, snake_cells, dims, colors, size):
         key=lambda c: c[0] + c[1],
     )
     snake_set = set(snake_cells)
+    outline = colors["outline"]
+    steps = len(colors["grid"])
     for week, day in cells:
         x, y = project(week, day, dims)
         height_px = heights_px[week][day]
         top, left, right = cube_polygons(x, y, height_px)
         bucket = max(0, min(4, int(height_px // HEIGHT_SCALE)))
-        top_color, left_color, right_color = colors["buckets"][bucket]
-        draw.polygon(left, fill=left_color)
-        draw.polygon(right, fill=right_color)
-        draw.polygon(top, fill=top_color)
+        if bucket == 0:
+            top_color, left_color, right_color = colors["empty"]
+        else:
+            step = round((week / (weeks - 1)) * (steps - 1)) if weeks > 1 else 0
+            top_color, left_color, right_color = colors["grid"][step][bucket - 1]
+        draw.polygon(left, fill=left_color, outline=outline)
+        draw.polygon(right, fill=right_color, outline=outline)
+        draw.polygon(top, fill=top_color, outline=outline)
         if (week, day) in snake_set:
-            draw.polygon(top, fill=colors["snake"])
+            draw.polygon(top, fill=colors["snake"], outline=outline)
     return image
