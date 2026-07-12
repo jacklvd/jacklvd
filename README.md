@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=600&lines=Hi%20there,%20I%27m%20Jack;A%20fan%20of%20great%20food;An%20active%20learner;%E2%98%86%2A%3A%20.%EF%BD%A1.%20o%28%E2%89%A7%E2%96%BD%E2%89%A6%29o%20.%EF%BD%A1.%3A%2A%E2%98%86" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=600&lines=Hi%20there,%20I%27m%20Jack;A%20fan%20of%20great%20food;An%20active%20learner;An%20agent%20builder;%E2%98%86%2A%3A%20.%EF%BD%A1.%20o%28%E2%89%A7%E2%96%BD%E2%89%A6%29o%20.%EF%BD%A1.%3A%2A%E2%98%86" alt="Typing SVG" />
 
 <!-- <img src="https://komarev.com/ghpvc/?username=jacklvd&label=Profile%20views&color=0e75b6&style=flat" alt="jacklvd" /> -->
 
@@ -8,7 +8,7 @@
 
 ##
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Standing.png" width="30"/> About Me
+<!-- ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Standing.png" width="30"/> About Me -->
 
 <img src="https://raw.githubusercontent.com/MastanSayyad/MastanSayyad/main/png-gif-3.gif" width="200" align="right" />
 
@@ -39,7 +39,7 @@
 </a>
 </p>
 
-## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Cat.png" width="30"/><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="30"/> Languages and Tools
+<!-- ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Cat.png" width="30"/><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="30"/> Languages and Tools
 <p align="center">
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="c"/>
@@ -94,7 +94,7 @@
   <a href="https://www.netlify.com/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/Netlify-00C7B7?style=for-the-badge&logo=netlify&logoColor=white" alt="Netlify">
   </a>
-</p>
+</p> -->
 
 ## <img src="https://camo.githubusercontent.com/7b60918a718d321e304686494060b6ed7c0957dfd29e0961d6b0e49cb9550e7f/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6959384352426451584f444a5343455249722f67697068792e676966" width="30"/> GitHub Stats
 <div align="center">
