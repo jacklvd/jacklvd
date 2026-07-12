@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=600&lines=Hi+there%2C+I'm+Jack;A+fan+of+great+food;An+active+learner;☆*: .｡. o(≧▽≦)o .｡.:*☆" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com/?font=Fira+Code&size=24&pause=1000&color=0E75B6&center=true&vCenter=true&width=600&lines=Hi%20there,%20I%27m%20Jack;A%20fan%20of%20great%20food;An%20active%20learner;%E2%98%86%2A%3A%20.%EF%BD%A1.%20o%28%E2%89%A7%E2%96%BD%E2%89%A6%29o%20.%EF%BD%A1.%3A%2A%E2%98%86" alt="Typing SVG" />
 
 <!-- <img src="https://komarev.com/ghpvc/?username=jacklvd&label=Profile%20views&color=0e75b6&style=flat" alt="jacklvd" /> -->
 
@@ -9,16 +9,21 @@
 <hr>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Standing.png" width="30"/> About Me
-- 🎓 I'm a **Software Engineer with interest fields in infra, data, web, ml**
 
-- 💬 I'm open to discuss **Everything** even not tech related :")
+<img src="https://raw.githubusercontent.com/MastanSayyad/MastanSayyad/main/png-gif-3.gif" width="200" align="left" />
 
-- 📫 I'm stay in-touch at **vodnglg@gmail.com**
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" width="20"/> I'm a **Software Engineer with interest fields in infra, data, web, ml**
 
-- ⚡ Fun fact **I love cooking but hate washing dishes. I also into Wild Rift and am at Master tier**
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Speech%20Balloon.png" width="20"/> I'm open to discuss **Everything** even not tech related :")
+
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Open%20Mailbox%20with%20Raised%20Flag.png" width="20"/> I'm stay in-touch at **vodnglg@gmail.com**
+
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" width="20"/> Fun fact **I love cooking but hate washing dishes. I also into Wild Rift and am at Master tier**
+
+<br clear="left"/>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Postbox.png" width="30"/> Socials
-<p align="left">
+<p align="center">
 <a href="https://jackvd.com/" style="text-decoration: none;">
 <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" />
 </a>
@@ -34,7 +39,7 @@
 </p>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Cat.png" width="30"/><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="30"/> Languages and Tools
-<p align="left">
+<p align="center">
   <a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="c"/>
   </a>
@@ -63,7 +68,7 @@
     <img src="https://img.shields.io/badge/Markdown-000000?style=for-the-badge&logo=markdown&logoColor=white" alt="markdown"/>
   </a>
 </p>
-<p align="left">
+<p align="center">
   <a href="https://www.w3.org/html/" target="_blank" rel="noreferrer">
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html5"/>
   </a>
