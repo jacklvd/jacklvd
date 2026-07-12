@@ -1,8 +1,11 @@
 import os
+from datetime import datetime, timedelta, timezone
 
+import charts
 import grid as gridmod
 import isometric
 import solver
+import stats as statsmod
 import gif as gifmod
 
 SHRINK_FRAMES = 5
@@ -11,6 +14,13 @@ BACKGROUND = (20, 19, 33)
 SNAKE = (245, 215, 110)
 OUTLINE = (10, 9, 18)
 EMPTY = ((42, 33, 64), (32, 25, 49), (23, 18, 35))
+RADAR_GRID = (90, 90, 110)
+RADAR_LINE = (245, 210, 90)
+TEXT = (230, 230, 235)
+
+RADAR_SIZE = (210, 190)
+DONUT_SIZE = (310, 150)
+OVERLAY_MARGIN = 14
 
 # Same three stops as the README's capsule-render footer (0:141321,50:A78BFA,100:F0568C),
 # swept left-to-right across the weeks so the grid reads as one gradient instead of flat purple.
@@ -50,15 +60,41 @@ def build_colors():
         "outline": OUTLINE,
         "empty": EMPTY,
         "grid": grid,
+        "radar_grid": RADAR_GRID,
+        "radar_line": RADAR_LINE,
+        "text": TEXT,
     }
 
 
-def all_colors_flat(colors) -> list[tuple[int, int, int]]:
-    flat = [colors["background"], colors["snake"], colors["outline"], *colors["empty"]]
+def _blend(fg, bg, alpha_frac) -> tuple[int, int, int]:
+    return tuple(round(fg[i] * alpha_frac + bg[i] * (1 - alpha_frac)) for i in range(3))
+
+
+def all_colors_flat(colors, language_colors: list[tuple[int, int, int]]) -> list[tuple[int, int, int]]:
+    flat = [
+        colors["background"],
+        colors["snake"],
+        colors["outline"],
+        *colors["empty"],
+        colors["radar_grid"],
+        colors["radar_line"],
+        colors["text"],
+        _blend(colors["radar_line"], colors["background"], charts.RADAR_FILL_ALPHA / 255),
+        _blend(colors["radar_line"], colors["radar_grid"], charts.RADAR_FILL_ALPHA / 255),
+        *language_colors,
+    ]
     for levels in colors["grid"]:
         for triple in levels:
             flat.extend(triple)
     return flat
+
+
+def compose_overlays(frame, radar_img, donut_img):
+    composed = frame.copy()
+    width, height = composed.size
+    composed.paste(radar_img, (width - radar_img.width - OVERLAY_MARGIN, OVERLAY_MARGIN))
+    composed.paste(donut_img, (OVERLAY_MARGIN, height - donut_img.height - OVERLAY_MARGIN))
+    return composed
 
 
 def build_heights_px(raw_grid: list[list[int]]) -> list[list[float]]:
@@ -67,11 +103,17 @@ def build_heights_px(raw_grid: list[list[int]]) -> list[list[float]]:
 
 def render(username: str, token: str, output_path: str) -> None:
     raw_grid = gridmod.fetch_contribution_weeks(username, token)
+    profile_stats = statsmod.fetch_profile_stats(username, token)
     walk = solver.solve(raw_grid)
     dims = (len(raw_grid), len(raw_grid[0]))
     size = isometric.canvas_size(dims)
     heights_px = build_heights_px(raw_grid)
     colors = build_colors()
+
+    today = datetime.now(timezone.utc).date()
+    date_range_label = f"{(today - timedelta(days=365)).isoformat()} / {today.isoformat()}"
+    radar_img = charts.draw_radar_chart(profile_stats["radar"], RADAR_SIZE, date_range_label, colors)
+    donut_img = charts.draw_donut_chart(profile_stats["languages"], DONUT_SIZE, colors)
 
     frames = []
     for index, cell in enumerate(walk):
@@ -86,7 +128,9 @@ def render(username: str, token: str, output_path: str) -> None:
         else:
             frames.append(isometric.draw_frame(heights_px, body, dims, colors, size))
 
-    gifmod.encode_gif(frames, output_path, all_colors_flat(colors))
+    composed = [compose_overlays(frame, radar_img, donut_img) for frame in frames]
+    language_colors = [color for _, _, color in profile_stats["languages"]]
+    gifmod.encode_gif(composed, output_path, all_colors_flat(colors, language_colors))
 
 
 if __name__ == "__main__":

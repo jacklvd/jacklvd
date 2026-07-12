@@ -49,6 +49,40 @@ def test_project_known_point():
     assert project(2, 1, (3, 2)) == (70, 55)
 
 
+def test_hex_to_rgb():
+    from stats import hex_to_rgb
+
+    assert hex_to_rgb("#3572A5") == (0x35, 0x72, 0xA5)
+    assert hex_to_rgb(None) == (110, 110, 110)
+
+
+def test_language_breakdown_ranks_and_buckets_other():
+    from stats import language_breakdown
+
+    repo_nodes = [
+        {"languages": {"edges": [{"size": 100, "node": {"name": "Python", "color": "#3572A5"}}]}},
+        {"languages": {"edges": [{"size": 50, "node": {"name": "HTML", "color": "#e34c26"}}]}},
+        {"languages": {"edges": [{"size": 10, "node": {"name": "CSS", "color": "#663399"}}]}},
+        {"languages": {"edges": [{"size": 5, "node": {"name": "Shell", "color": "#89e051"}}]}},
+        {"languages": {"edges": [{"size": 3, "node": {"name": "Lua", "color": "#000080"}}]}},
+        {"languages": {"edges": [{"size": 2, "node": {"name": "Makefile", "color": "#427819"}}]}},
+    ]
+    result = language_breakdown(repo_nodes)
+    names = [name for name, _, _ in result]
+    assert names == ["Python", "HTML", "CSS", "Shell", "Lua", "other"]
+    assert abs(sum(fraction for _, fraction, _ in result) - 1.0) < 1e-9
+    assert result[-1][1] == 2 / 170
+
+
+def test_radar_value_ratio_log_scale():
+    from charts import _value_ratio
+
+    assert _value_ratio(1) == 0.0
+    assert abs(_value_ratio(100) - 0.5) < 1e-9
+    assert _value_ratio(10000) == 1.0
+    assert _value_ratio(50000) == 1.0
+
+
 def main():
     tests = [obj for name, obj in globals().items() if name.startswith("test_") and callable(obj)]
     for test in tests:
