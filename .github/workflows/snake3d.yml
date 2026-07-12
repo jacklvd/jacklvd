@@ -18,7 +18,7 @@ jobs:
         run: uv run --directory snake3d test_render.py
       - name: render
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.CONTRIB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
         run: uv run --directory snake3d render.py
       - name: commit & push
