@@ -28,6 +28,9 @@
 <a href="mailto:vodnglg@gmail.com" style="text-decoration: none;">
 <img src="https://img.shields.io/badge/email-%23EA4335?&style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
+<a href="https://www.kaggle.com/jackyvo" style="text-decoration: none;">
+<img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
+</a>
 </p>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Cat.png" width="30"/><img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Laptop.png" width="30"/> Languages and Tools
@@ -120,7 +123,7 @@ Markdown             46 mins         >------------------------   04.35 %
 <!-- dev-note: waka-readme workflow is disabled (see .github/workflows/waka-readme.yml), so this block is now static until re-enabled -->
 
 <div align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0E75B6,100:1A1A2E&height=120&section=footer" width="100%"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:141321,50:A78BFA,100:F0568C&height=120&section=footer" width="100%"/>
 </div>
 
 <!---
