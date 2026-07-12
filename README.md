@@ -6,11 +6,11 @@
 
 </div>
 
-<hr>
+##
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/People/Person%20Standing.png" width="30"/> About Me
 
-<img src="https://raw.githubusercontent.com/MastanSayyad/MastanSayyad/main/png-gif-3.gif" width="200" align="left" />
+<img src="https://raw.githubusercontent.com/MastanSayyad/MastanSayyad/main/png-gif-3.gif" width="200" align="right" />
 
 - <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" width="20"/> I'm a **Software Engineer with interest fields in infra, data, web, ml**
 
@@ -23,6 +23,7 @@
 <br clear="left"/>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Postbox.png" width="30"/> Socials
+> wanna grab a coffee chat (っ.❛ ▽ ❛.)っ
 <p align="center">
 <a href="https://jackvd.com/" style="text-decoration: none;">
 <img src="https://img.shields.io/badge/website-000000?style=for-the-badge&logo=About.me&logoColor=white" />
