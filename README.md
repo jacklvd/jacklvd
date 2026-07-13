@@ -18,7 +18,7 @@
 
 - <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Open%20Mailbox%20with%20Raised%20Flag.png" width="20"/> I'm stay in-touch at **vodnglg@gmail.com**
 
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" width="20"/> Fun fact **I love cooking but hate washing dishes. I also into Wild Rift and am at Master tier**
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Travel%20and%20places/High%20Voltage.png" width="20"/> Fun fact **I love cooking but hate washing dishes. I plays Wild Rift at Master tier**
 
 <br clear="left"/>
 
