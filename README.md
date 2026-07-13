@@ -12,7 +12,7 @@
 
 <img src="https://raw.githubusercontent.com/MastanSayyad/MastanSayyad/main/png-gif-3.gif" width="200" align="right" />
 
-- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" width="20"/> I'm a **Software Engineer with interest fields in infra, data, web, ml**
+- <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Objects/Graduation%20Cap.png" width="20"/> I'm a **Software Engineer interested in infra, data, web, ml**
 
 - <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Smilies/Speech%20Balloon.png" width="20"/> I'm open to discuss **Everything** even not tech related :")
 
@@ -97,6 +97,7 @@
 </p> -->
 
 ## <img src="https://camo.githubusercontent.com/7b60918a718d321e304686494060b6ed7c0957dfd29e0961d6b0e49cb9550e7f/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6959384352426451584f444a5343455249722f67697068792e676966" width="30"/> GitHub Stats
+> currious about my stat huh (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 <div align="center">
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=jacklvd&theme=radical" alt="jacklvd" height="165"/>
 </div>
@@ -105,6 +106,7 @@
 </div>
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Snake.png" width="30"/> Contribution Snake
+> I love eating same as my snake (o´∀`o)
 <div align="center">
   <img src="https://raw.githubusercontent.com/jacklvd/jacklvd/main/snake3d/output.gif" alt="snake eating its way across a 3D contribution graph" />
 </div>
