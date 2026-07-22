@@ -111,7 +111,7 @@ def render(username: str, token: str, output_path: str) -> None:
     colors = build_colors()
 
     today = datetime.now(timezone.utc).date()
-    date_range_label = f"{(today - timedelta(days=365)).isoformat()} / {today.isoformat()}"
+    date_range_label = f"{today.isoformat()} / {(today + timedelta(days=7)).isoformat()}"
     radar_img = charts.draw_radar_chart(profile_stats["radar"], RADAR_SIZE, date_range_label, colors)
     donut_img = charts.draw_donut_chart(profile_stats["languages"], DONUT_SIZE, colors)
 
