@@ -70,6 +70,47 @@ def test_world_wraps_after_one_loop():
     assert frame_at(0, 0) == frame_at(64, LOOP_SCROLL)
 
 
+def test_loop_frames_wrap_scroll():
+    from render.horse import loop_frames
+    from render.horse_sprite import GAITS
+    from render.scene import LOOP_SCROLL
+
+    assert [loop_frames(g) for g in ("graze", "walk", "trot", "gallop")] == [64, 160, 100, 64]
+    for g in ("walk", "trot", "gallop"):
+        gait = GAITS[g]
+        assert loop_frames(g) * gait.stride_px / gait.frames == LOOP_SCROLL
+
+
+def test_gif_deterministic_and_small():
+    import os
+    import tempfile
+    from render.horse import render_frames, write_gif
+
+    d = tempfile.mkdtemp()
+    a, b = os.path.join(d, "a.gif"), os.path.join(d, "b.gif")
+    write_gif(render_frames(4, "walk"), a)  # longest loop, most detail
+    write_gif(render_frames(4, "walk"), b)
+    assert open(a, "rb").read() == open(b, "rb").read()
+    assert os.path.getsize(a) < 1_000_000, os.path.getsize(a)
+
+
+def test_write_gif_rejects_palette_overflow():
+    import os
+    import tempfile
+    from PIL import Image
+    from render.horse import write_gif
+
+    frames = [Image.new("RGB", (32, 16))]
+    frames[0].putdata([(i % 256, (i // 256) * 100, 0) for i in range(512)])  # 512 distinct colors
+    path = os.path.join(tempfile.mkdtemp(), "x.gif")
+    try:
+        write_gif(frames, path)
+    except AssertionError:
+        assert not os.path.exists(path)
+    else:
+        raise AssertionError("palette overflow was accepted")
+
+
 def main():
     tests = [obj for name, obj in globals().items() if name.startswith("test_") and callable(obj)]
     for test in tests:
