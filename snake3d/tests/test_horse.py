@@ -70,6 +70,17 @@ def test_world_wraps_after_one_loop():
     assert frame_at(0, 0) == frame_at(64, LOOP_SCROLL)
 
 
+def test_house_is_bigger_at_level_4():
+    from render.scene import build_backdrop, draw_world, WALL, WALL_LIT
+
+    def wall_pixels(level):
+        img = build_backdrop()
+        draw_world(img, 0, 64, 0, level)
+        return sum(n for n, c in img.getcolors(10000) if c in (WALL, WALL_LIT))
+
+    assert wall_pixels(4) >= 1.5 * wall_pixels(3)
+
+
 def test_loop_frames_wrap_scroll():
     from render.horse import loop_frames
     from render.horse_sprite import GAITS

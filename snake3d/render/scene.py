@@ -116,21 +116,27 @@ def _blob(img, cx, cy, r, col) -> None:
 
 
 def _house(img, frac: float, loop_frames: int, level: int) -> None:
-    x, y = HOUSE_X, HORIZON - 9
-    _rect(img, x, y + 4, 8, 5, WALL)
-    _rect(img, x + 6, y + 4, 2, 5, WALL_LIT)
-    for i in range(4):
-        _rect(img, x - 1 + i, y + 4 - i, 10 - 2 * i, 1, ROOF)
-    _rect(img, x + 6, y, 1, 3, CHIMNEY)
-    _rect(img, x + 2, y + 5, 2, 2, WINDOW_LIT if level >= 2 else WINDOW_DARK)
-    if level >= 4:
-        _px(img, x + 9, y + 6, LANTERN)
-        _px(img, x + 9, y + 5, CHIMNEY)
+    big = level >= 4  # the homestead grows with the top level
+    w, h, roof = (12, 8, 6) if big else (8, 5, 4)
+    x, top = HOUSE_X - (2 if big else 0), HORIZON - h  # wall top; walls sit on the horizon
+    _rect(img, x, top, w, h, WALL)
+    _rect(img, x + w - 2, top, 2, h, WALL_LIT)
+    for i in range(roof):
+        _rect(img, x - 1 + i, top - 1 - i, w + 2 - 2 * i, 1, ROOF)
+    cx = x + w - 3
+    chimney_top = top - roof + 1
+    _rect(img, cx, chimney_top, 1 + big, roof - 1, CHIMNEY)
+    window = WINDOW_LIT if level >= 2 else WINDOW_DARK
+    _rect(img, x + 2, top + 1 + big, 2, 2, window)
+    if big:
+        _rect(img, x + 7, top + 2, 2, 2, window)
+        _rect(img, x + 5, top + 4, 2, 4, CHIMNEY)  # door
+        _px(img, x + 4, top + 4, LANTERN)
     if level >= 2:
         cycles = max(1, loop_frames // 32)
         for i in range(6):
             age = (frac * cycles + i / 6) % 1
-            _px(img, x + 6 - age * 6, y - 1 - age * 9, SMOKE[min(2, int(age * 3))])
+            _px(img, cx - age * 6, chimney_top - 1 - age * 9, SMOKE[min(2, int(age * 3))])
 
 
 def draw_world(img: Image.Image, frame: int, loop_frames: int, scroll: float, level: int) -> None:
