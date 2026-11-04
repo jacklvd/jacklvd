@@ -49,6 +49,27 @@ def test_rim_light_only_from_level_3():
     assert rim in {c for _, c in draw_horse(0, "gallop", 3).getcolors(10000)}
 
 
+def test_backdrop_no_banding_and_static():
+    from render.scene import build_backdrop, HORIZON
+
+    a, b = build_backdrop(), build_backdrop()
+    assert a.tobytes() == b.tobytes()
+    row = [a.getpixel((x, HORIZON // 2)) for x in range(64)]
+    assert len(set(row)) >= 2  # dithered: mid-sky rows mix two colors
+
+
+def test_world_wraps_after_one_loop():
+    from render.scene import build_backdrop, draw_world, draw_foreground, LOOP_SCROLL
+
+    def frame_at(f, scroll):
+        img = build_backdrop()
+        draw_world(img, f, 64, scroll, 4)
+        draw_foreground(img, f, 64, scroll, 4)
+        return img.tobytes()
+
+    assert frame_at(0, 0) == frame_at(64, LOOP_SCROLL)
+
+
 def main():
     tests = [obj for name, obj in globals().items() if name.startswith("test_") and callable(obj)]
     for test in tests:
