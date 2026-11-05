@@ -1,0 +1,31 @@
+name: generate pixel horse
+
+on:
+  schedule:
+    - cron: "0 9 * * *" # just after Pacific midnight (PST and PDT), so "yesterday" is a finished day
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.CONTRIB_TOKEN }}
+      - uses: astral-sh/setup-uv@v3
+      - name: self-check
+        run: uv run --directory snake3d python -m tests.test_horse
+      - name: render
+        env:
+          GITHUB_TOKEN: ${{ secrets.CONTRIB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+        run: uv run --directory snake3d python -m render.horse
+      - name: commit & push
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add snake3d/horse.gif
+          if git commit -m "generated"; then git push; fi

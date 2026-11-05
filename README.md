@@ -105,6 +105,13 @@
   <img src="https://streak-stats.demolab.com/?user=jacklvd&theme=tokyonight" alt="jacklvd streak"/>
 </div>
 
+## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Horse.png" width="30"/> My Horse
+> it gallops harder the more i commit (ﾉ´ヮ`)ﾉ*: ･ﾟ
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jacklvd/jacklvd/main/snake3d/horse.gif" alt="pixel black horse running through a sunset field, drawn from my GitHub activity" />
+</div>
+<!-- dev-note: redrawn nightly by horse.yml — detail level from past-year contributions, gait from yesterday's -->
+
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Snake.png" width="30"/> Contribution Snake
 > I love eating same as my snake (o´∀`o)
 <div align="center">
