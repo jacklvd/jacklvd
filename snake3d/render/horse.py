@@ -23,34 +23,48 @@ def loop_frames(gait: str) -> int:
     return g.frames * (scene.LOOP_SCROLL // g.stride_px)
 
 
-def render_frames(level: int, gait: str) -> list[Image.Image]:
+def render_frame(level: int, gait: str, frame: int) -> Image.Image:
+    """One native-resolution (320x120) frame."""
     g, total = GAITS[gait], loop_frames(gait)
-    frames = []
-    for frame in range(total):
-        phase = (frame % g.frames) / g.frames
-        scroll = frame * g.stride_px / g.frames
-        img = scene.build_backdrop()
-        scene.draw_world(img, frame, total, scroll, level)
-        lift = max(0.0, math.sin(2 * math.pi * (phase - 0.55))) if gait == "gallop" else 0.0
-        scene.draw_shadow(img, HX, round((32 if level >= 2 else 24) - lift * 8))
-        if level >= 4 and g.stride_px:
-            scene.draw_dust(img, HX - 14, frame, total)
-        sprite = draw_horse(frame, gait, level)
-        img.paste(sprite, (HX - SPRITE_ANCHOR[0], scene.GROUND - SPRITE_ANCHOR[1]), sprite)
-        scene.draw_foreground(img, frame, total, scroll, level)
-        frames.append(img.resize((scene.W * SCALE, scene.H * SCALE), Image.NEAREST))
-    return frames
+    phase = (frame % g.frames) / g.frames
+    scroll = frame * g.stride_px / g.frames
+    img = scene.build_backdrop()
+    scene.draw_world(img, frame, total, scroll, level)
+    lift = max(0.0, math.sin(2 * math.pi * (phase - 0.55))) if gait == "gallop" else 0.0
+    scene.draw_shadow(img, HX, round((32 if level >= 2 else 24) - lift * 8))
+    if level >= 4 and g.stride_px:
+        scene.draw_dust(img, HX - 14, frame, total)
+    sprite = draw_horse(frame, gait, level)
+    img.paste(sprite, (HX - SPRITE_ANCHOR[0], scene.GROUND - SPRITE_ANCHOR[1]), sprite)
+    scene.draw_foreground(img, frame, total, scroll, level)
+    return img
+
+
+def render_frames(level: int, gait: str) -> list[Image.Image]:
+    return [render_frame(level, gait, frame) for frame in range(loop_frames(gait))]
 
 
 def write_gif(frames: list[Image.Image], path: str) -> None:
+    """Encodes native frames upscaled SCALEx, mapping every color to its exact palette slot."""
     colors: set[tuple[int, int, int]] = set()
     for frame in frames:
         found = frame.getcolors(maxcolors=256)
         assert found is not None, "frame has more than 256 colors"
         colors.update(color for _, color in found)
     assert len(colors) <= 256, f"{len(colors)} colors exceed the GIF palette"
+    palette = sorted(colors)
+    # Pillow's quantize() matches colors at reduced precision and merged near-twins (sun #ffd77e -> window #ffd27a),
+    # so index pixels ourselves.
+    slot = {bytes(color): i for i, color in enumerate(palette)}
+    ref = gifmod.build_palette_image(palette)
+    indexed = []
+    for frame in frames:
+        data = frame.tobytes()
+        p = Image.frombytes("P", frame.size, bytes(slot[data[i : i + 3]] for i in range(0, len(data), 3)))
+        p.putpalette(ref.getpalette())
+        indexed.append(p.resize((frame.width * SCALE, frame.height * SCALE), Image.NEAREST))
     tmp = f"{path}.tmp.gif"
-    gifmod.encode_gif(frames, tmp, sorted(colors), duration=FRAME_MS, optimize=True)
+    indexed[0].save(tmp, save_all=True, append_images=indexed[1:], loop=0, duration=FRAME_MS, optimize=True)
     os.replace(tmp, path)  # never leave a half-written GIF at the published path
 
 

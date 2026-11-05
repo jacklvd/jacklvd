@@ -1,4 +1,4 @@
-from datetime import date, datetime, timedelta
+from datetime import date, datetime, timedelta, timezone
 from zoneinfo import ZoneInfo
 
 import requests
@@ -36,6 +36,10 @@ def gait_for(count: int) -> str:
     return GAITS_BY_BUCKET[bucket_height(count)]
 
 
+def pacific_today(now: datetime) -> date:
+    return now.astimezone(TIMEZONE).date()
+
+
 def yesterday_count(days: list[tuple[str, int]], today: date) -> int:
     target = (today - timedelta(days=1)).isoformat()
     return next((count for day, count in days if day == target), 0)
@@ -55,4 +59,4 @@ def fetch_activity(username: str, token: str) -> tuple[int, int]:
         for week in calendar["weeks"]
         for day in week["contributionDays"]
     ]
-    return calendar["totalContributions"], yesterday_count(days, datetime.now(TIMEZONE).date())
+    return calendar["totalContributions"], yesterday_count(days, pacific_today(datetime.now(timezone.utc)))

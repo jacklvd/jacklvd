@@ -122,6 +122,55 @@ def test_write_gif_rejects_palette_overflow():
         raise AssertionError("palette overflow was accepted")
 
 
+def test_gif_pixels_match_rendered_frames():
+    import os
+    import tempfile
+    from PIL import Image
+    from render.horse import render_frames, write_gif, SCALE
+
+    frames = render_frames(4, "gallop")[:4]  # level >= 2 has the near-identical sun/window yellows
+    path = os.path.join(tempfile.mkdtemp(), "h.gif")
+    write_gif(frames, path)
+    gif = Image.open(path)
+    for i, frame in enumerate(frames):
+        gif.seek(i)
+        expected = frame.resize((frame.width * SCALE, frame.height * SCALE), Image.NEAREST)
+        assert gif.convert("RGB").tobytes() == expected.tobytes(), f"frame {i} colors were remapped"
+
+
+def test_planted_hooves_stay_on_ground():
+    from render.horse_sprite import GAITS, body_bob, body_scale, ground_units, leg_points, stance_sweep
+
+    for gait in ("walk", "trot", "gallop"):
+        g = GAITS[gait]
+        for level in (1, 2):
+            s = body_scale(level)
+            sweep, gy = stance_sweep(g, s), ground_units(g, s)
+            for f in range(g.frames):
+                phase = f / g.frames
+                hip_y = body_bob(g, phase) + 2
+                for key, hx, front in (("hl", -7, False), ("hr", -7, False), ("fl", 7, True), ("fr", 7, True)):
+                    p = (phase + g.offsets[key]) % 1
+                    if p < g.stance:
+                        _, (_, hoof_y) = leg_points(hx, hip_y, p, front, g, sweep, gy)
+                        assert abs(hoof_y - gy) * s <= 0.5, (gait, level, f, key, hoof_y, gy)
+
+
+def test_pacific_today_crosses_utc_midnight():
+    from datetime import datetime, timezone
+    from render.activity import pacific_today
+
+    assert pacific_today(datetime(2026, 11, 4, 5, 0, tzinfo=timezone.utc)).isoformat() == "2026-11-03"
+    assert pacific_today(datetime(2026, 11, 4, 9, 0, tzinfo=timezone.utc)).isoformat() == "2026-11-04"
+
+
+def test_full_frame_loops_for_every_gait():
+    from render.horse import loop_frames, render_frame
+
+    for gait in ("graze", "walk", "trot", "gallop"):
+        assert render_frame(4, gait, 0).tobytes() == render_frame(4, gait, loop_frames(gait)).tobytes(), gait
+
+
 def main():
     tests = [obj for name, obj in globals().items() if name.startswith("test_") and callable(obj)]
     for test in tests:
