@@ -20,5 +20,5 @@ def encode_gif(frames: list[Image.Image], path: str, colors: list[tuple[int, int
         append_images=indexed[1:],
         loop=0,
         duration=duration,
-        optimize=False,
+        optimize=True,
     )

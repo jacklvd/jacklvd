@@ -1,5 +1,4 @@
 import os
-from datetime import datetime, timedelta, timezone
 
 from . import charts
 from . import grid as gridmod
@@ -8,24 +7,26 @@ from . import solver
 from . import stats as statsmod
 from . import gif as gifmod
 
-SHRINK_FRAMES = 5
+SUBSTEPS = 4  # frames per grid cell; the head glides between cells instead of snapping
+FRAME_MS = 40
 
 BACKGROUND = (20, 19, 33)
 SNAKE = (245, 215, 110)
+SNAKE_STRIPE = (214, 168, 72)
 OUTLINE = (10, 9, 18)
 EMPTY = ((42, 33, 64), (32, 25, 49), (23, 18, 35))
-RADAR_GRID = (90, 90, 110)
+RADAR_GRID = (118, 116, 150)
 RADAR_LINE = (245, 210, 90)
 TEXT = (230, 230, 235)
 
-RADAR_SIZE = (210, 205)
-DONUT_SIZE = (310, 150)
+RADAR_SIZE = (230, 220)
+LEGEND_SIZE = (200, 150)
 OVERLAY_MARGIN = 26
 
-# Same three stops as the README's capsule-render footer (0:141321,50:A78BFA,100:F0568C),
-# swept left-to-right across the weeks so the grid reads as one gradient instead of flat purple.
-GRADIENT_STOPS = [(20, 19, 33), (167, 122, 250), (240, 86, 140)]
+# Weeks are split into one color band per language (sized by share), so more languages = more colors.
+# dev-note: GitHub has no per-day language data, so a band shows overall share, not what that week was written in
 GRADIENT_STEPS = 16
+FALLBACK_HUE = (167, 122, 250)
 TOP_FACTORS = [0.55, 0.7, 0.85, 1.0]
 LEFT_SCALE = 0.78
 RIGHT_SCALE = 0.58
@@ -35,20 +36,32 @@ def _lerp(a, b, t) -> tuple[int, int, int]:
     return tuple(round(a[i] + (b[i] - a[i]) * t) for i in range(3))
 
 
-def _gradient_hue(t: float) -> tuple[int, int, int]:
-    if t <= 0.5:
-        return _lerp(GRADIENT_STOPS[0], GRADIENT_STOPS[1], t / 0.5)
-    return _lerp(GRADIENT_STOPS[1], GRADIENT_STOPS[2], (t - 0.5) / 0.5)
+def band_languages(languages):
+    """Real languages by share, at most one per band ("other" is a bucket, not a language)."""
+    named = sorted((lang for lang in languages if lang[0] != "other"), key=lambda lang: -lang[1])
+    return named[:GRADIENT_STEPS]
+
+
+def language_bands(languages, steps: int = GRADIENT_STEPS) -> list[tuple[int, int, int]]:
+    named = band_languages(languages)[:steps]
+    if not named:
+        return [FALLBACK_HUE] * steps
+    total = sum(share for _, share, _ in named)
+    ideal = [share / total * (steps - len(named)) for _, share, _ in named]
+    counts = [1 + int(x) for x in ideal]  # every language gets at least one band
+    by_remainder = sorted(range(len(named)), key=lambda i: int(ideal[i]) - ideal[i])
+    for i in by_remainder[: steps - sum(counts)]:
+        counts[i] += 1
+    return [color for (_, _, color), n in zip(named, counts) for _ in range(n)]
 
 
 def _scale(color, factor) -> tuple[int, int, int]:
     return tuple(min(255, round(c * factor)) for c in color)
 
 
-def build_colors():
+def build_colors(languages):
     grid = []
-    for step in range(GRADIENT_STEPS):
-        hue = _gradient_hue(step / (GRADIENT_STEPS - 1))
+    for hue in language_bands(languages):
         levels = []
         for factor in TOP_FACTORS:
             top = _lerp(BACKGROUND, hue, factor)
@@ -57,6 +70,7 @@ def build_colors():
     return {
         "background": BACKGROUND,
         "snake": SNAKE,
+        "snake_stripe": SNAKE_STRIPE,
         "outline": OUTLINE,
         "empty": EMPTY,
         "grid": grid,
@@ -74,6 +88,7 @@ def all_colors_flat(colors, language_colors: list[tuple[int, int, int]]) -> list
     flat = [
         colors["background"],
         colors["snake"],
+        colors["snake_stripe"],
         colors["outline"],
         *colors["empty"],
         colors["radar_grid"],
@@ -89,11 +104,11 @@ def all_colors_flat(colors, language_colors: list[tuple[int, int, int]]) -> list
     return flat
 
 
-def compose_overlays(frame, radar_img, donut_img):
+def compose_overlays(frame, radar_img, legend_img):
     composed = frame.copy()
     width, height = composed.size
     composed.paste(radar_img, (width - radar_img.width - OVERLAY_MARGIN, OVERLAY_MARGIN))
-    composed.paste(donut_img, (OVERLAY_MARGIN, height - donut_img.height - OVERLAY_MARGIN))
+    composed.paste(legend_img, (OVERLAY_MARGIN, height - legend_img.height - OVERLAY_MARGIN))
     return composed
 
 
@@ -108,29 +123,26 @@ def render(username: str, token: str, output_path: str) -> None:
     dims = (len(raw_grid), len(raw_grid[0]))
     size = isometric.canvas_size(dims)
     heights_px = build_heights_px(raw_grid)
-    colors = build_colors()
+    colors = build_colors(profile_stats["languages"])
 
-    today = datetime.now(timezone.utc).date()
-    date_range_label = f"{today.isoformat()} / {(today + timedelta(days=7)).isoformat()}"
-    radar_img = charts.draw_radar_chart(profile_stats["radar"], RADAR_SIZE, date_range_label, colors)
-    donut_img = charts.draw_donut_chart(profile_stats["languages"], DONUT_SIZE, colors)
+    radar_img = charts.draw_radar_chart(profile_stats["radar"], RADAR_SIZE, colors)
+    legend_img = charts.draw_legend(band_languages(profile_stats["languages"]), LEGEND_SIZE, colors)
 
     frames = []
-    for index, cell in enumerate(walk):
-        body = solver.snake_body(walk, index)
-        week, day = cell
-        target_height = heights_px[week][day]
-        if target_height > 0:
-            for step in range(1, SHRINK_FRAMES + 1):
-                heights_px[week][day] = target_height * (1 - step / SHRINK_FRAMES)
-                frames.append(isometric.draw_frame(heights_px, body, dims, colors, size))
-            heights_px[week][day] = 0
-        else:
-            frames.append(isometric.draw_frame(heights_px, body, dims, colors, size))
+    for index in range(len(walk) - 1):
+        week, day = walk[index + 1]
+        start_height = heights_px[week][day]
+        for sub in range(SUBSTEPS):
+            s = index + sub / SUBSTEPS
+            heights_px[week][day] = start_height * (1 - sub / SUBSTEPS)  # block sinks as the head arrives
+            frames.append(isometric.draw_frame(heights_px, isometric.snake_points(walk, s, dims), s, dims, colors, size))
+        heights_px[week][day] = 0
+    end = len(walk) - 1
+    frames.append(isometric.draw_frame(heights_px, isometric.snake_points(walk, end, dims), end, dims, colors, size))
 
-    composed = [compose_overlays(frame, radar_img, donut_img) for frame in frames]
+    composed = [compose_overlays(frame, radar_img, legend_img) for frame in frames]
     language_colors = [color for _, _, color in profile_stats["languages"]]
-    gifmod.encode_gif(composed, output_path, all_colors_flat(colors, language_colors))
+    gifmod.encode_gif(composed, output_path, all_colors_flat(colors, language_colors), FRAME_MS)
 
 
 if __name__ == "__main__":

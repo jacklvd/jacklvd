@@ -83,6 +83,37 @@ def test_radar_value_ratio_log_scale():
     assert _value_ratio(50000) == 1.0
 
 
+def test_snake_glides_between_cells():
+    from render.isometric import TILE_W, snake_points
+
+    walk = [(0, 0), (1, 0), (1, 1), (2, 1)]
+    dims = (3, 2)
+    heads = [snake_points(walk, i / 4, dims)[0] for i in range(13)]
+    for a, b in zip(heads, heads[1:]):
+        step = ((a[0] - b[0]) ** 2 + (a[1] - b[1]) ** 2) ** 0.5
+        assert 0 < step <= TILE_W / 4, step  # moves every frame, never jumps a whole cell
+    body = snake_points(walk, 3.0, dims)
+    assert len(body) > 4 and body[-1] == snake_points(walk, 0.0, dims)[0]  # tail clamps at the start
+
+
+def test_radar_labels_show_counts():
+    from render.charts import axis_label
+
+    assert axis_label("Commit", 630) == ("Commit", "630")
+    assert axis_label("Commit", 1234) == ("Commit", "1.2K")
+
+
+def test_language_bands_scale_with_languages():
+    from render.render import language_bands
+
+    py, ts, c = (1, 1, 1), (2, 2, 2), (3, 3, 3)
+    bands = language_bands([("Python", 0.5, py), ("TypeScript", 0.4, ts), ("C", 0.01, c)], 10)
+    assert len(bands) == 10 and bands[0] == py and bands[-1] == c  # ordered by share, every language visible
+    assert bands.count(py) > bands.count(ts) > bands.count(c) == 1
+    assert language_bands([("Python", 1.0, py)], 10) == [py] * 10
+    assert language_bands([("other", 1.0, c)], 4) == [language_bands([], 4)[0]] * 4  # "other" is not a language
+
+
 def main():
     tests = [obj for name, obj in globals().items() if name.startswith("test_") and callable(obj)]
     for test in tests:

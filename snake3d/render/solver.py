@@ -57,7 +57,3 @@ def solve(grid: list[list[int]]) -> list[Cell]:
 
     return walk
 
-
-def snake_body(walk: list[Cell], index: int, max_len: int = 8) -> list[Cell]:
-    start_idx = max(0, index - max_len + 1)
-    return walk[start_idx:index + 1]
