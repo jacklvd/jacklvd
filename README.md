@@ -96,6 +96,7 @@
   </a>
 </p> -->
 
+<!-- dev-note: stats hidden, the horse and snake already show activity
 ## <img src="https://camo.githubusercontent.com/7b60918a718d321e304686494060b6ed7c0957dfd29e0961d6b0e49cb9550e7f/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6959384352426451584f444a5343455249722f67697068792e676966" width="30"/> GitHub Stats
 > currious about my stat huh (ﾉ◕ヮ◕)ﾉ*:･ﾟ✧
 <div align="center">
@@ -104,6 +105,7 @@
 <div align="center">
   <img src="https://streak-stats.demolab.com/?user=jacklvd&theme=tokyonight" alt="jacklvd streak"/>
 </div>
+-->
 
 ## <img src="https://raw.githubusercontent.com/Tarikul-Islam-Anik/Animated-Fluent-Emojis/master/Emojis/Animals/Horse.png" width="30"/> My Horse
 > it gallops harder the more i commit (ﾉ´ヮ`)ﾉ*: ･ﾟ
