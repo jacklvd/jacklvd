@@ -139,6 +139,21 @@ def _house(img, frac: float, loop_frames: int, level: int) -> None:
             _px(img, cx - age * 6, chimney_top - 1 - age * 9, SMOKE[min(2, int(age * 3))])
 
 
+BIRDS = ((60, 20), (72, 24), (82, 18))
+BIRD_PHASES = (0.0, 0.3, 0.6)
+
+
+def bird_positions(frame: int, loop_frames: int) -> list[tuple[float, float]]:
+    """Birds circle lazily in the distance; whole circles per loop keep it seamless at under 1 px/frame."""
+    turns = max(1, loop_frames // 64)
+    frac = (frame % loop_frames) / loop_frames
+    out = []
+    for (bx, by), ph in zip(BIRDS, BIRD_PHASES):
+        t = 2 * math.pi * (frac * turns + ph)
+        out.append((bx + 9 * math.sin(t), by + 2 * math.sin(2 * t)))
+    return out
+
+
 def draw_world(img: Image.Image, frame: int, loop_frames: int, scroll: float, level: int) -> None:
     frac = (frame % loop_frames) / loop_frames
     if level >= 4:
@@ -151,9 +166,7 @@ def draw_world(img: Image.Image, frame: int, loop_frames: int, scroll: float, le
                 _px(img, 60 + k * 50 - tail, 6 + k * 12 - tail * 0.25, STAR if tail < 2 else STAR_DIM)
     if level >= 2:
         flaps = max(1, loop_frames // 8)
-        for bx, by, ph in ((0, 20, 0.0), (12, 24, 0.3), (22, 18, 0.6)):
-            x = frac * (W + 40) - 20 + bx
-            y = by + round(math.sin(2 * math.pi * (frac + ph)))
+        for (x, y), ph in zip(bird_positions(frame, loop_frames), BIRD_PHASES):
             up = 1 if math.sin(2 * math.pi * (frac * flaps + ph)) > 0 else 0
             _px(img, x, y, BIRD)
             _px(img, x - 1, y - up, BIRD)
@@ -183,12 +196,24 @@ def draw_shadow(img: Image.Image, x: int, width: int) -> None:
     _rect(img, x - width // 2 + 2, GROUND + 1, max(1, width - 4), 1, SHADOW)
 
 
-def draw_dust(img: Image.Image, x: int, frame: int, loop_frames: int) -> None:
+DUST_LIFE = 16  # frames a puff lives
+
+
+def dust_particles(x: int, frame: int, loop_frames: int, ground_speed: float) -> list[tuple[float, float]]:
+    """Puffs kicked up at x that drift back with the ground, so they stay where the hoof struck."""
+    lives = max(1, round(loop_frames / DUST_LIFE))  # whole lifetimes per loop keep it seamless
+    travel = ground_speed * loop_frames / lives
     frac = (frame % loop_frames) / loop_frames
-    cycles = max(1, loop_frames // 16)
+    out = []
     for i in range(5):
-        age = (frac * cycles + i / 5) % 1
-        _px(img, x - age * 18, GROUND - 1 - age * 4 + (i % 2), DUST)
+        age = (frac * lives + i / 5) % 1
+        out.append((x - age * travel, GROUND - 1 - age * 4 + (i % 2)))
+    return out
+
+
+def draw_dust(img: Image.Image, x: int, frame: int, loop_frames: int, ground_speed: float) -> None:
+    for px, py in dust_particles(x, frame, loop_frames, ground_speed):
+        _px(img, px, py, DUST)
 
 
 def draw_foreground(img: Image.Image, frame: int, loop_frames: int, scroll: float, level: int) -> None:

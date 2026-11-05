@@ -116,7 +116,7 @@ def test_write_gif_rejects_palette_overflow():
     path = os.path.join(tempfile.mkdtemp(), "x.gif")
     try:
         write_gif(frames, path)
-    except AssertionError:
+    except ValueError:
         assert not os.path.exists(path)
     else:
         raise AssertionError("palette overflow was accepted")
@@ -169,6 +169,39 @@ def test_full_frame_loops_for_every_gait():
 
     for gait in ("graze", "walk", "trot", "gallop"):
         assert render_frame(4, gait, 0).tobytes() == render_frame(4, gait, loop_frames(gait)).tobytes(), gait
+
+
+def test_birds_glide_slowly_and_stay_on_screen():
+    from render.scene import W, bird_positions
+
+    for loop in (64, 100, 160):
+        prev = bird_positions(0, loop)
+        for f in range(1, loop + 1):
+            cur = bird_positions(f, loop)
+            assert all(0 <= x < W for x, _ in cur), (loop, f)
+            assert max(abs(x - px) for (x, _), (px, _) in zip(cur, prev)) <= 1.0, (loop, f)
+            prev = cur
+
+
+def test_dust_drifts_back_at_ground_speed():
+    from render.scene import dust_particles
+
+    for speed in (1.0, 1.6, 2.5):
+        a, b = dust_particles(150, 3, 64, speed), dust_particles(150, 4, 64, speed)
+        moved = [bx - ax for (ax, _), (bx, _) in zip(a, b) if bx < ax]  # skip particles that just respawned
+        assert moved and all(abs(m + speed) < 1e-9 for m in moved), (speed, moved)
+
+
+def test_cli_needs_level_and_gait_together():
+    from render.horse import parse_args
+
+    for argv in (["--level", "2"], ["--gait", "trot"]):
+        try:
+            parse_args(argv)
+        except SystemExit:
+            continue
+        raise AssertionError(f"{argv} was accepted")
+    assert parse_args(["--level", "2", "--gait", "trot"]).level == 2
 
 
 def main():

@@ -33,7 +33,7 @@ def render_frame(level: int, gait: str, frame: int) -> Image.Image:
     lift = max(0.0, math.sin(2 * math.pi * (phase - 0.55))) if gait == "gallop" else 0.0
     scene.draw_shadow(img, HX, round((32 if level >= 2 else 24) - lift * 8))
     if level >= 4 and g.stride_px:
-        scene.draw_dust(img, HX - 14, frame, total)
+        scene.draw_dust(img, HX - 14, frame, total, g.stride_px / g.frames)
     sprite = draw_horse(frame, gait, level)
     img.paste(sprite, (HX - SPRITE_ANCHOR[0], scene.GROUND - SPRITE_ANCHOR[1]), sprite)
     scene.draw_foreground(img, frame, total, scroll, level)
@@ -49,9 +49,11 @@ def write_gif(frames: list[Image.Image], path: str) -> None:
     colors: set[tuple[int, int, int]] = set()
     for frame in frames:
         found = frame.getcolors(maxcolors=256)
-        assert found is not None, "frame has more than 256 colors"
+        if found is None:
+            raise ValueError("frame has more than 256 colors")
         colors.update(color for _, color in found)
-    assert len(colors) <= 256, f"{len(colors)} colors exceed the GIF palette"
+    if len(colors) > 256:
+        raise ValueError(f"{len(colors)} colors exceed the GIF palette")
     palette = sorted(colors)
     # Pillow's quantize() matches colors at reduced precision and merged near-twins (sun #ffd77e -> window #ffd27a),
     # so index pixels ourselves.
@@ -64,8 +66,12 @@ def write_gif(frames: list[Image.Image], path: str) -> None:
         p.putpalette(ref.getpalette())
         indexed.append(p.resize((frame.width * SCALE, frame.height * SCALE), Image.NEAREST))
     tmp = f"{path}.tmp.gif"
-    indexed[0].save(tmp, save_all=True, append_images=indexed[1:], loop=0, duration=FRAME_MS, optimize=True)
-    os.replace(tmp, path)  # never leave a half-written GIF at the published path
+    try:
+        indexed[0].save(tmp, save_all=True, append_images=indexed[1:], loop=0, duration=FRAME_MS, optimize=True)
+        os.replace(tmp, path)  # never leave a half-written GIF at the published path
+    finally:
+        if os.path.exists(tmp):
+            os.remove(tmp)
 
 
 def write_preview(out_dir: str) -> None:
@@ -88,14 +94,20 @@ def write_preview(out_dir: str) -> None:
         )
 
 
-def main() -> None:
+def parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Render the pixel horse GIF")
     parser.add_argument("--level", type=int, choices=LEVELS)
     parser.add_argument("--gait", choices=list(GAITS))
     parser.add_argument("--out", default="horse.gif")
     parser.add_argument("--preview", metavar="DIR", help="render every level x gait into DIR with an index.html")
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
+    if (args.level is None) != (args.gait is None):
+        parser.error("--level and --gait go together")
+    return args
 
+
+def main() -> None:
+    args = parse_args()
     if args.preview:
         write_preview(args.preview)
         return
