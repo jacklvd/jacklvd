@@ -15,7 +15,7 @@ jobs:
       - uses: actions/checkout@v7
         with:
           token: ${{ secrets.CONTRIB_TOKEN }}
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.3.3
       - name: self-check
         run: uv run --directory snake3d python -m tests.test_render
       - name: render
