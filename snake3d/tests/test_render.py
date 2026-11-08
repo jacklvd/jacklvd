@@ -45,8 +45,8 @@ def test_solver_walk_contiguous_and_covers_targets():
 def test_project_known_point():
     from render.isometric import project
 
-    assert project(0, 0, (3, 2)) == (90, 70)
-    assert project(2, 1, (3, 2)) == (100, 85)
+    assert project(0, 0, (3, 2)) == (90, 130)
+    assert project(2, 1, (3, 2)) == (100, 145)
 
 
 def test_hex_to_rgb():
@@ -124,3 +124,17 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+def test_radar_clears_tallest_blocks():
+    from render.isometric import HEIGHT_SCALE, TILE_H, TILE_W, canvas_size, project
+    from render.render import OVERLAY_MARGIN, RADAR_SIZE
+
+    dims = (53, 7)
+    width, _ = canvas_size(dims)
+    left, bottom = width - RADAR_SIZE[0] - OVERLAY_MARGIN, OVERLAY_MARGIN + RADAR_SIZE[1]
+    for week in range(dims[0]):
+        for day in range(dims[1]):
+            x, y = project(week, day, dims)
+            block_top = y - TILE_H // 2 - 4 * HEIGHT_SCALE
+            assert x + TILE_W // 2 < left or block_top > bottom, (week, day)

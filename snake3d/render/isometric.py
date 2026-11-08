@@ -6,6 +6,7 @@ TILE_W = 20
 TILE_H = 10
 HEIGHT_SCALE = 8
 MARGIN = 70
+TOP_PAD = 60  # extra headroom so the top-right radar sits above the board, not on it
 
 SNAKE_CELLS = 5  # body length in grid cells
 SNAKE_SPACING = 0.25  # one body disc every quarter cell
@@ -15,7 +16,7 @@ HEAD_R, TAIL_R = 6.0, 2.5
 def project(week: int, day: int, dims: tuple[int, int]) -> tuple[int, int]:
     _, days = dims
     origin_x = days * (TILE_W // 2) + MARGIN
-    origin_y = MARGIN
+    origin_y = MARGIN + TOP_PAD
     x = origin_x + (week - day) * (TILE_W // 2)
     y = origin_y + (week + day) * (TILE_H // 2)
     return x, y
@@ -24,7 +25,7 @@ def project(week: int, day: int, dims: tuple[int, int]) -> tuple[int, int]:
 def canvas_size(dims: tuple[int, int]) -> tuple[int, int]:
     weeks, days = dims
     width = (weeks + days) * (TILE_W // 2) + MARGIN * 2
-    height = (weeks + days) * (TILE_H // 2) + 4 * HEIGHT_SCALE + MARGIN * 2
+    height = (weeks + days) * (TILE_H // 2) + 4 * HEIGHT_SCALE + MARGIN * 2 + TOP_PAD
     return width, height
 
 
